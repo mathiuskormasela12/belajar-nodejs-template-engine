@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <body>
+    {{> headerComponent}}
+    {{! ini komentar }}
+    {{#name}}
+      <h1>Hello {{.}}</h1>
+    {{/name}}
+
+    <p>My Frameworks</p>
+    {{! Looping Array }}
+    <ol>
+      {{#frameworks}}
+        <li>{{.}}</li>
+      {{/frameworks}}
+    </ol>
+
+    <p>Gfriend Members</p>
+    {{! Looping Array of Object}}
+    <ol>
+      {{#gfriend}}
+        <li>{{#ubahJadiHurufBesar}} {{name}} {{/ubahJadiHurufBesar}} - {{born}}</li>
+      {{/gfriend}}
+    </ol>
+
+    {{! Negasi Section}}
+    {{^menikah}}
+      <p>blm menikah</p>
+    {{/menikah}}
+  </body>
+</html>
